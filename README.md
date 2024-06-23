@@ -1,13 +1,14 @@
 ```
-::::██████╗██████╗:██████╗:::::::██████╗:██████╗:::: 
-:::██╔════╝██╔══██╗██╔══██╗:::::██╔═████╗╚════██╗:::
-:::██║:::::██████╔╝██████╔╝:::::██║██╔██║:█████╔╝:::
-:::██║:::::██╔═══╝ ██╔═══╝ :::::████╔╝██║:╚═══██╗:::
-:::╚██████╗██║:::::██║::::::::::╚██████╔╝██████╔╝:::
-::::╚═════╝╚═╝:::::╚═╝:::::::::::╚═════╝:╚═════╝::::
+:: ██████╗██████╗ ██████╗::::::██████╗:██╗::██╗::
+::██╔════╝██╔══██╗██╔══██╗::::██╔═████╗██║::██║::
+::██║:::::██████╔╝██████╔╝::::██║██╔██║███████║::
+::██║:::::██╔═══╝ ██╔═══╝ ::::████╔╝██║╚════██║::
+::╚██████╗██║:::::██║:::::::::╚██████╔╝:::::██║::
+:: ╚═════╝╚═╝:::::╚═╝::::::::: ╚═════╝::::::╚═╝::
 ```
                                              
-*This module is designed to help you understand Inheritance in CPP.*
+*This module is designed to help you understand Subtype polymorphism,\
+abstract classes and interfaces in CPP.*
 
  Skills | Grade |
 :------:|:-----:|
@@ -18,7 +19,7 @@
   * **[General rules](#general-rules)**
   * **[design requirements](#alguns-requisitos-de-design)**
   * **[Read me](#read-me)**
-* **[Wiki](https://github.com/faleite/42cpp00/wiki/Module-IV)**
+* **[Wiki](https://github.com/faleite/42cpp00/wiki/Module-V)**
 * **[Roadmap](https://faleite.github.io/cpp)**
 * **[Study resources](#study-resources)**
 <!-- * ### [Usage]() -->
