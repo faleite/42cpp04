@@ -119,10 +119,10 @@ int main() {
 ```cpp
 #include <iostream>
 
-// Classe abstrata Shape
-class Shape {
+// Classe abstrata Shape (Boa pratica adicionar o prefixo A para classes abstratas)
+class AShape {
 public:
-	/*Método Virtual Puro: virtual void draw() const = 0; faz de Shape uma classe
+	/*Método Virtual Puro: virtual void draw() const = 0; faz de AShape uma classe
 	abstrata. Esse método deve ser implementado pelas classes derivadas.*/
     virtual void draw() const = 0;
 
@@ -130,15 +130,15 @@ public:
 	/*Tem uma implementação padrão, mas pode ser 
 	sobrescrito pelas classes derivadas.*/
     virtual void move(int x, int y) {
-        std::cout << "Moving shape to (" << x << ", " << y << ")" << std::endl;
+        std::cout << "Moving Ashape to (" << x << ", " << y << ")" << std::endl;
     }
 
     // Destrutor virtual
-    virtual ~Shape() {}
+    virtual ~AShape() {}
 };
 
-// Classe derivada Circle que herda de Shape
-class Circle : public Shape {
+// Classe derivada Circle que herda de AShape
+class Circle : public AShape {
 public:
     // Implementação do método virtual puro draw
     void draw() const {
@@ -146,8 +146,8 @@ public:
     }
 };
 
-// Classe derivada Square que herda de Shape
-class Square : public Shape {
+// Classe derivada Square que herda de AShape
+class Square : public AShape {
 public:
     // Implementação do método virtual puro draw
     void draw() const {
@@ -156,7 +156,7 @@ public:
 };
 
 int main() {
-    Shape* shapes[2];
+    AShape* shapes[2];
     shapes[0] = new Circle();
     shapes[1] = new Square();
 
@@ -180,8 +180,8 @@ int main() {
 ```cpp
 #include <iostream>
 
-// Interface Drawable
-class Drawable {
+// Interface Drawable (Boa pratica adicionar o prefixo I para o nome da Classe interface)
+class IDrawable {
 public:
     // Métodos virtuais puros
     virtual void draw() const = 0;
@@ -189,14 +189,14 @@ public:
 
     // Destrutor virtual puro
 	/*O destrutor virtual puro deve ser definido fora da classe.*/
-    virtual ~Drawable() = 0;
+    virtual ~IDrawable() = 0;
 };
 
 // Implementação do destrutor virtual puro fora da definição da classe
-Drawable::~Drawable() {}
+IDrawable::~IDrawable() {}
 
-// Classe derivada Circle que implementa Drawable
-class Circle : public Drawable {
+// Classe derivada Circle que implementa IDrawable
+class Circle : public IDrawable {
 public:
     void draw() const {
         std::cout << "Drawing a circle" << std::endl;
@@ -207,8 +207,8 @@ public:
     }
 };
 
-// Classe derivada Square que implementa Drawable
-class Square : public Drawable {
+// Classe derivada Square que implementa IDrawable
+class Square : public IDrawable {
 public:
     void draw() const {
         std::cout << "Drawing a square" << std::endl;
@@ -220,7 +220,7 @@ public:
 };
 
 int main() {
-    Drawable* drawables[2];
+    IDrawable* drawables[2];
     drawables[0] = new Circle();
     drawables[1] = new Square();
 
