@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:58:20 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 21:12:06 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/25 21:20:03 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,40 +17,15 @@
 #include "WrongCat.hpp"
 
 /**
- * Executar este código deve imprimir os sons específicos das classes Dog 
- * e Cat, não os do Animal.
+Uma cópia de um Cachorro ou Gato não deve ser superficial. 
+Portanto, você tem que testar se suas cópias são cópias profundas!.
 */
 int main()
 {
-	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	
-	delete meta;
-	delete j;
+	delete j;//should not create a leak
 	delete i;
-	
-	{
-		std::cout << "\n/* Wrong Classes Tests 1 */\n" << std::endl;
-		WrongCat c;
-		WrongAnimal a(c);
-		// retorna "WrongCat" porque o tipo foi copiado do objeto WrongCat.
-		std::cout << a.getType() << " " << std::endl;
-		// Como makeSound não é virtual em WrongAnimal, 
-		// a função chamada é a versão de WrongAnimal.
-		a.makeSound();
-	}
-	{	
-		std::cout << "\n/* Wrong Classes Tests 2 */\n" << std::endl;
-    	WrongCat c;
-    	WrongAnimal* a = &c; // Usando um ponteiro
-    	std::cout << a->getType() << " " << std::endl;
-    	a->makeSound();
-	}
+	// ...
 	return 0;
 }

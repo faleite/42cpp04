@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:38:24 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 19:35:49 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/25 21:59:13 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 /**
  * Essas duas classes derivadas devem definir seu campo de tipo dependendo 
@@ -27,6 +28,8 @@
 
 class Dog : public Animal
 {
+	private:
+		Brain *brain;
 	public:
 		Dog();
 		Dog(const Dog &copyObj);

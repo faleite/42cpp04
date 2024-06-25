@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:38:24 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 19:35:49 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/25 21:58:48 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 /**
  * Essas duas classes derivadas devem definir seu campo de tipo dependendo 
@@ -25,15 +26,17 @@
  * para o valor de sua escolha.
 */
 
-class Dog : public Animal
+class Cat : public Animal
 {
+	private:
+		Brain *brain;
 	public:
-		Dog();
-		Dog(const Dog &copyObj);
-		Dog &operator=(const Dog &copyAssObj);
-		~Dog();
+		Cat();
+		Cat(const Cat &copyObj);
+		Cat &operator=(const Cat &copyAssObj);
+		~Cat();
 		
 		void makeSound() const;
 };
 
-#endif // DOG_HPP
+#endif // CAT_HPP

@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:38:24 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/24 20:56:47 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/25 19:37:05 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ class Cat : public Animal
 {
 	public:
 		Cat();
-		Cat(const std::string &type);
 		Cat(const Cat &copyObj);
 		Cat &operator=(const Cat &copyAssObj);
 		~Cat();
-		void makeSound();
+		
+		void makeSound() const;
 };
 
 #endif // CAT_HPP
