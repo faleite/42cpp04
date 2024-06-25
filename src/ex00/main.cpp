@@ -6,13 +6,18 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:58:20 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/24 20:59:53 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:45:21 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+
+/**
+ * Executar este código deve imprimir os sons específicos das classes Dog 
+ * e Cat, não os do Animal.
+*/
 
 int main()
 {
