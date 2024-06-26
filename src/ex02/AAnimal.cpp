@@ -1,48 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/26 16:31:54 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/26 18:12:59 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal() : type("None")
+AAnimal::AAnimal() : type("None")
 {
-	std::cout << "Animal Default constructor called" << std::endl;
+	std::cout << "AAnimal Default constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &copyObj)
+AAnimal::AAnimal(const AAnimal &copyObj)
 {
 	if (this != &copyObj)
-		*this = copyObj; 
-	std::cout << "Animal Copy constructor called" << std::endl;
+		*this = copyObj;
+	std::cout << "AAnimal Copy constructor called" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &copyAssObj)
+AAnimal &AAnimal::operator=(const AAnimal &copyAssObj)
 {
 	if (this != &copyAssObj)
 		this->type = copyAssObj.type;
-	std::cout << "Animal assignment operator called" << std::endl;
+	std::cout << "AAnimal assignment operator called" << std::endl;
 	return (*this);
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-	std::cout << "Animal Destructor called" << std::endl;
+	std::cout << "AAnimal Destructor called" << std::endl;
 }
 
-void Animal::makeSound() const
+void AAnimal::makeSound() const
 {
-	std::cout << "Animal made some sound" << std::endl;
+	std::cout << "AAnimal made some sound" << std::endl;
 }
 
-const std::string &Animal::getType() const
+const std::string &AAnimal::getType() const
 {
 	return (type);
 }

@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 20:59:51 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:41:07 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ WrongAnimal::WrongAnimal() : type("WrongNone")
 	std::cout << "WrongAnimal Default constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &copyObj) : type(copyObj.type)
+WrongAnimal::WrongAnimal(const WrongAnimal &copyObj)
 {
+	if (this != &copyObj)
+		*this = copyObj;
 	std::cout << "WrongAnimal Copy constructor called" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:38:24 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 19:51:07 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:39:39 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ Dog::Dog() : Animal()
 
 Dog::Dog(const Dog &copyObj) : Animal(copyObj)
 {
+	if (this != &copyObj)
+		*this = copyObj;
 	std::cout << "Dog Copy constructor called" << std::endl;
 }
 

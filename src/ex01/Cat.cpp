@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:55:52 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 20:40:01 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/26 17:22:07 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,16 @@
 Cat::Cat() : Animal()
 {
 	type = "Cat";
+	brain = new Brain();
 	std::cout << "Cat Default constructor called" << std::endl;
 }
-
+/*
+* Normalmente, o construtor de cópia deve realizar a cópia direta dos dados
+*/
 Cat::Cat(const Cat &copyObj) : Animal(copyObj)
 {
+	if (this != &copyObj)
+		*this = copyObj;
 	std::cout << "Cat Copy constructor called" << std::endl;
 }
 
@@ -36,6 +41,7 @@ Cat &Cat::operator=(const Cat &copyAssObj)
 
 Cat::~Cat()
 {
+	delete this->brain;
 	std::cout << "Cat Destructor called" << std::endl;
 }
 void Cat::makeSound() const

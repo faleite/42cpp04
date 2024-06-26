@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 19:35:56 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:48:19 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ Animal::Animal() : type("None")
 	std::cout << "Animal Default constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &copyObj) : type(copyObj.type)
+Animal::Animal(const Animal &copyObj)
 {
+	if (this != &copyObj)
+		*this = copyObj;
 	std::cout << "Animal Copy constructor called" << std::endl;
 }
 
