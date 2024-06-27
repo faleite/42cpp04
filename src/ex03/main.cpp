@@ -6,13 +6,15 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 18:44:56 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/26 18:50:29 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/27 22:38:34 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
-#include "IMateriaSource.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {

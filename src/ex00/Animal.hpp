@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 19:36:05 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/27 19:15:41 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,10 @@ const no final do metodo garante que o método não modifica o estado do objeto,
 permitindo que eleseja chamado em objetos constantes.
 */
 
+/**
+ * explain why the Animals destructor was virtual which was a key point 
+ * for solving ex01.
+ */
 class Animal
 {
 	protected:
