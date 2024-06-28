@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 21:22:13 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 21:47:42 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/28 17:36:50 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,14 @@ Brain &Brain::operator=(const Brain &copyAssObj)
 Brain::~Brain()
 {
 	std::cout << "Brain Destructor called" << std::endl;
+}
+
+const std::string &Brain::getIdea(int index) const
+{
+	return ideas[index];
+}
+
+void Brain::setIdea(int index, const std::string &idea)
+{
+	ideas[index] = idea;
 }

@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 18:22:56 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/27 21:15:58 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:38:03 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 #include <iostream>
 #include "ICharacter.hpp"
 
-class ICharacter; //
+/** DECLARACAO ANTECIPADA
+ * Uma declaração antecipada informa ao compilador que a classe ICharacter
+ * existe, sem fornecer os detalhes completos sobre sua implementação. 
+ * Isso permite que a classe AMateria use um ponteiro ou referência para 
+ * ICharacter sem precisar conhecer sua definição completa.
+*/
+class ICharacter;
 
 class AMateria
 {

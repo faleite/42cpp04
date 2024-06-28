@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 21:22:13 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/26 16:13:22 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/28 17:24:18 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ class Brain
 		Brain(const Brain &copyObj);
 		Brain &operator=(const Brain &copyAssObj);
 		virtual ~Brain();
+
+		const std::string &getIdea(int index) const;
+		void setIdea(int index, const std::string &idea);
 };
 
 #endif // BRAIN_HPP

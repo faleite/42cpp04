@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 19:25:58 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/27 21:16:22 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:32:12 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CHARACTER_HPP
 
 #include "ICharacter.hpp"
-#include "Amateria.hpp"
+#include "AMateria.hpp"
 
 /** ???
  * Seu Character deve ter um construtor que tome seu nome como parâmetro. 

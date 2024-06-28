@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:38:24 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 21:59:13 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/28 17:34:22 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Dog : public Animal
 		~Dog();
 		
 		void makeSound() const;
+		Brain *getBrain() const;
 };
 
 #endif // DOG_HPP
