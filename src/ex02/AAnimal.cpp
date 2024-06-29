@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/27 21:22:40 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 17:52:52 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,26 @@ AAnimal::AAnimal() : type("None")
 	std::cout << "AAnimal Default constructor called" << std::endl;
 }
 
+AAnimal::AAnimal(const std::string& type) : type(type)
+{
+	std::cout << "AAnimal constructor called" << std::endl;
+}
+
 AAnimal::AAnimal(const AAnimal &copyObj)
 {
-	if (this != &copyObj)
-		*this = copyObj;
 	std::cout << "AAnimal Copy constructor called" << std::endl;
+	if (this != &copyObj)
+	{
+		type = copyObj.type;
+		*this = copyObj;
+	}
 }
 
 AAnimal &AAnimal::operator=(const AAnimal &copyAssObj)
 {
+	std::cout << "AAnimal assignment operator called" << std::endl;
 	if (this != &copyAssObj)
 		this->type = copyAssObj.type;
-	std::cout << "AAnimal assignment operator called" << std::endl;
 	return (*this);
 }
 

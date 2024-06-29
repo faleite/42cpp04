@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 21:22:13 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/28 17:36:50 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 17:25:33 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,14 @@ Brain::~Brain()
 
 const std::string &Brain::getIdea(int index) const
 {
-	return ideas[index];
+	if (index < 0 || index >= 100)
+		throw std::out_of_range("Index out of bounds");
+	return (ideas[index]);
 }
 
 void Brain::setIdea(int index, const std::string &idea)
 {
+	if (index < 0 || index >= 100)
+		throw std::out_of_range("Index out of bounds");
 	ideas[index] = idea;
 }

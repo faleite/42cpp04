@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/26 16:41:07 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 15:39:09 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ WrongAnimal::WrongAnimal() : type("WrongNone")
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copyObj)
 {
+	std::cout << "WrongAnimal Copy constructor called" << std::endl;
 	if (this != &copyObj)
 		*this = copyObj;
-	std::cout << "WrongAnimal Copy constructor called" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &copyAssObj)
 {
+	std::cout << "WrongAnimal assignment operator called" << std::endl;
 	if (this != &copyAssObj)
 		this->type = copyAssObj.type;
-	std::cout << "WrongAnimal assignment operator called" << std::endl;
 	return (*this);
 }
 

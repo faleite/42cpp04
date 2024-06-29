@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:55:52 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/26 16:39:08 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 15:45:54 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 Cat::Cat() : Animal()
 {
-	type = "Cat";
 	std::cout << "Cat Default constructor called" << std::endl;
+	type = "Cat";
 }
 
 Cat::Cat(const Cat &copyObj) : Animal(copyObj)
 {
+	std::cout << "Cat Copy constructor called" << std::endl;
 	if (this != &copyObj)
 		*this = copyObj;
-	std::cout << "Cat Copy constructor called" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &copyAssObj)
 {
+	std::cout << "Cat assignment operator called" << std::endl;
 	if (this != &copyAssObj) // Verifica auto-atribuição
 	{
 		Animal::operator=(copyAssObj);  // Chama o operador de atribuição da classe base
 		type = copyAssObj.type; // Copia o membro `type` específico da classe `Cat`
 	}
-	std::cout << "Cat assignment operator called" << std::endl;
 	return (*this);  // Retorna a referência ao objeto atual
 }
 

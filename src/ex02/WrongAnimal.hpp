@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/25 21:05:38 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 19:06:50 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class WrongAnimal
 		virtual ~WrongAnimal();
 		
 		const std::string& getType() const;
-		virtual void makeSound() const;
+		void makeSound() const;
 };
 
 #endif // WRONGANIMAL_HPP

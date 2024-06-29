@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:55:52 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/28 16:39:52 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 17:39:59 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,44 @@
 
 Cat::Cat() : Animal()
 {
+	std::cout << "Cat Default constructor called" << std::endl;
 	type = "Cat";
 	brain = new Brain();
-	std::cout << "Cat Default constructor called" << std::endl;
 }
-/*
-* Normalmente, o construtor de cópia deve realizar a cópia direta dos dados
-*/
+
 Cat::Cat(const Cat &copyObj) : Animal(copyObj)
 {
-	if (this != &copyObj)
-		*this = copyObj;
 	std::cout << "Cat Copy constructor called" << std::endl;
+	if (this != &copyObj)
+	{
+		brain = new Brain();
+		*this = copyObj;
+	}
 }
 
 Cat &Cat::operator=(const Cat &copyAssObj)
 {
-	if (this != &copyAssObj) // Verifica auto-atribuição
-	{
-		Animal::operator=(copyAssObj);  // Chama o operador de atribuição da classe base
-		type = copyAssObj.type; // Copia o membro `type` específico da classe `Dog`
-	}
 	std::cout << "Cat assignment operator called" << std::endl;
-	return (*this);  // Retorna a referência ao objeto atual
+	if (this != &copyAssObj)
+	{
+		Animal::operator=(copyAssObj);
+		type = copyAssObj.type;
+		*brain = *(copyAssObj.brain);
+	}
+	return (*this);
 }
 
 Cat::~Cat()
 {
-	delete this->brain;
 	std::cout << "Cat Destructor called" << std::endl;
+	delete brain;
 }
 void Cat::makeSound() const
 {
 	std::cout << "Cat meows" << std::endl;
+}
+
+Brain *Cat::getBrain() const
+{
+	return (brain);
 }

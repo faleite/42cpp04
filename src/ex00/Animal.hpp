@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/27 19:15:41 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 14:36:51 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 
-/**
+/** POYMORPHISM
  * Para cada exercício, você precisa fornecer os testes mais completos que puder.
  * Construtores e destrutores de cada classe devem exibir mensagens específicas. 
  * Não use a mesma mensagem para todas as classes.
@@ -48,10 +48,9 @@
  * Implemente e entregue mais testes do que os fornecidos acima.
 */
 
-/* 
-O DESTRUTOR VIRTUAL é virtual para garantir que o destrutor correto seja 
-chamado para objetos derivados. Ele também imprime uma mensagem 
-indicando que foi chamado.
+/* DESTRUTOR VIRTUAL
+O destrutor é virtual para garantir que o destrutor correto seja 
+chamado para objetos derivados.
 
 Quando alguém excluirá um objeto de classe derivada por meio de um ponteiro 
 de classe base. Em particular, é aqui que você precisa tornar seu destruidor 
@@ -76,14 +75,14 @@ método da classe derivada seja chamado mesmo quando o objeto é acessado
 através de um ponteiro ou referência para a classe base.
 
 Se makeSound() não fosse declarado como virtual, a chamada 
-myAnimal->makeSound() (do objeto Animal *myAnimal = new Dog();) 
+Animal->makeSound() (do objeto Animal a* = new Dog();) 
 sempre invocaria o método da classe base Animal, 
-mesmo se myAnimal apontasse para um objeto Dog.
+mesmo se Animal apontasse para um objeto Dog.
 */
 
 /* `virtual void makeSound() const;`
 const no final do metodo garante que o método não modifica o estado do objeto,
-permitindo que eleseja chamado em objetos constantes.
+permitindo que ele seja chamado em objetos constantes.
 */
 
 /**

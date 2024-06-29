@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:18:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/26 16:31:54 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/29 14:28:26 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ Animal::Animal() : type("None")
 
 Animal::Animal(const Animal &copyObj)
 {
+	std::cout << "Animal Copy constructor called" << std::endl;
 	if (this != &copyObj)
 		*this = copyObj; 
-	std::cout << "Animal Copy constructor called" << std::endl;
 }
 
 Animal &Animal::operator=(const Animal &copyAssObj)
 {
+	std::cout << "Animal assignment operator called" << std::endl;
 	if (this != &copyAssObj)
 		this->type = copyAssObj.type;
-	std::cout << "Animal assignment operator called" << std::endl;
 	return (*this);
 }
 
